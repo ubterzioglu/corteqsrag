@@ -1,11 +1,3 @@
 import "server-only";
 
-export function getRequiredEnv(name: string): string {
-  const value = process.env[name];
-
-  if (!value || !value.trim()) {
-    throw new Error(`Missing required environment variable: ${name}`);
-  }
-
-  return value;
-}
+export { getRequiredEnv } from "@/lib/env-core";

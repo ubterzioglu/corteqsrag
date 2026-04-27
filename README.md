@@ -22,6 +22,7 @@ cp .env.example .env.local
 GEMINI_API_KEY=
 GEMINI_CHAT_MODEL=gemini-2.5-flash-lite
 GEMINI_EMBEDDING_MODEL=gemini-embedding-001
+GEMINI_EMBEDDING_DIMENSIONS=1536
 
 NEXT_PUBLIC_SUPABASE_URL=
 NEXT_PUBLIC_SUPABASE_ANON_KEY=
@@ -82,3 +83,4 @@ Ornek cevap:
 - `GEMINI_API_KEY` ve `SUPABASE_SERVICE_ROLE_KEY` sadece server-side kullanilmalidir.
 - Gercek secret degerlerini repoya commit etme.
 - Bu iterasyonda ingestion UI, auth ve citation yoktur.
+- Mevcut Supabase vector kolonu 1536 ise `GEMINI_EMBEDDING_DIMENSIONS=1536` kullan.
